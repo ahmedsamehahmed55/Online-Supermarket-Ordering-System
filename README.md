@@ -37,14 +37,26 @@ template libraries for Linked Lists and Dynamic Array or Vector with extended fe
 It uses Linked List of Item for this management called tlist.h.   
 
 - **`Item`**  
-  Represents a product with properties such as ID, name, quantity, and retail price.  
+  Represents a product with properties such as ID, name, quantity, and retail price. It has operator Overloading for comparision between different items.  
 
 - **`Inventory`**  
   Manages all available items, including searching by ID or category, adding/removing items, and tracking stock. It uses Dynamic Vector called tvector.h. 
 
 ---
 
+## Data Structures
 
+- **`tlist<T>`**  
+  A template-based linked list used for dynamic collections like the shopping cart. Supports insertion, deletion, search, and sorting.   
+
+- **`tvector<T>`**  
+  A template-based dynamic array used to store the inventory items. Supports indexed access, automatic resizing, and sorting of elements using advanced O(nlogn) algorithms like Merge Sort. It uses merge sort in loading the inventory for the first time and Insertion Sort to just insert one item, keeping it effecient for all senarios.  
+
+- **Usage in the System**  
+  - `Customer`’s shopping cart uses a `tlist<Item>`.  
+  - `Inventory` uses a `tvector<Item>` to manage all products.  
+
+---
 ## Folder Structure
 - `src/` → C++ source files
 - `include/` → Header files
